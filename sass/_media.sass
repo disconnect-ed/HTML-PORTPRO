@@ -1,0 +1,306 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1500px)
+  .main-header
+    min-height: 100vh
+    &-hero
+      min-height: 100vh
+    &:before
+      bottom: 0
+      height: auto
+    &-info
+      width: 400px
+      margin-left: 100px
+      padding-top: 0
+    &__title
+      font-size: 100px
+      margin-bottom: 0
+      line-height: 100px
+    &__subtitle
+      font-size: 20px
+      margin-bottom: 20px
+
+
+
+@media only screen and (max-width : 1200px)
+
+  .nav
+    height: auto
+    line-height: inherit
+    &-menu
+      display: flex
+    &-links
+      display: none
+    &-social-links
+      display: none
+    &-logo
+      border: none
+
+  .main-header
+    &-info
+      padding-left: 0
+      margin: 0 auto
+
+  .products
+    grid-template-columns: 1fr 1fr
+    &-block
+      &:nth-child(3),
+      &:nth-child(10)
+        border-top: none
+      &:nth-child(4)
+        border-bottom: $border
+      &:nth-child(7)
+        grid-column: 1 / 3
+    &-promotion
+      &_second
+        background-position: top
+
+  .brands
+    grid-template-columns: repeat(4, 1fr)
+    &-block
+      &:nth-child(6)
+        border-right: $border
+      &:nth-child(7),
+      &:nth-child(8)
+        border-bottom: $border
+
+  .free
+    grid-template-columns: 1fr 1fr
+    &-block
+      &:nth-child(1)
+        border-bottom: 1px solid #c7c7c7
+      &:nth-child(2)
+        border-right: none
+        border-bottom: 1px solid #c7c7c7
+
+  .main-footer
+    grid-template-columns: 1fr 1fr 1fr
+    padding-top: 50px
+    &-wrap
+      &:before
+        height: 100vh
+    &-block
+      margin-bottom: 30px
+      &:last-child
+        grid-column: 1 / 4
+    &-feedback
+      margin: 0
+      display: flex
+      justify-content: space-around
+      width: 100%
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+
+    .offer
+      grid-template-columns: 1fr
+      &-block
+        &:last-child
+          display: none
+
+    .gallery
+      grid-template-columns: 1fr 1fr
+
+    .brands
+      grid-template-columns: repeat(3, 1fr)
+      &-block
+        &:nth-child(9)
+          border-bottom: $border
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+
+  .main-footer
+    grid-template-columns: 1fr 1fr
+    &__wrap
+      &:before
+        top: 0
+    &-block
+      &:last-child
+        grid-column: 2 / 3
+    &-feedback
+      display: block
+
+  .offer
+    &__overhead
+      margin-bottom: 20px
+    &__title
+      margin-bottom: 30px
+    &__text
+      margin-top: 0
+      margin-bottom: 30px
+
+    &-block
+      min-height: 650px
+    &-price
+      margin-bottom: 30px
+      p
+        &:first-child
+          font-size: 38px
+        &:last-child
+          font-size: 20px
+
+  .products
+    &-promotion
+      &_first
+        h2
+          font-size: 35px
+          line-height: 40px
+      &_second
+        h2
+          font-size: 40px
+          line-height: 50px
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 540px)
+  .free
+    grid-template-columns: 1fr
+    &-block
+      border-right: none
+      &:nth-child(3)
+        border-bottom: 1px solid #c7c7c7
+
+  .main-footer
+    grid-template-columns: 1fr
+    text-align: center
+    &-block
+      &:last-child
+        grid-column: 1 / 2
+
+  .main-header
+    &-info
+      width: 300px
+    &__title
+      font-size: 70px
+      margin-bottom: 0
+      line-height: 70px
+    &__subtitle
+      font-size: 15px
+      margin-bottom: 20px
+    &__button
+      font-size: 13px
+      line-height: 40px
+      padding: 0 25px
+      border-radius: 25px
+
+  .gallery
+    grid-template-columns: 1fr
+    &-block
+      height: 320px
+      background-position: top
+
+  .products
+    grid-template-columns: 1fr
+    >*
+      border-right: none !important
+      border-top: none !important
+      border-bottom: $border !important
+    &-block
+      &:first-child
+        border-top: $border !important
+      &:nth-child(7)
+        grid-column: 1 / 2
+    &-promotion
+      h2
+        font-size: 30px
+        line-height: 40px
+
+  .offer
+    &__overhead
+      font-size: 15px
+      margin-bottom: 15px
+    &__title
+      font-size: 30px
+      margin-bottom: 25px
+    &__text
+      margin-top: 0
+      margin-bottom: 15px
+      font-size: 16px
+
+  .nav
+    &-cart
+      display: none
+    &-search
+      display: none
+
+@media only screen and (max-width : 480px)
+  .brands
+    grid-template-columns: 1fr
+    >*
+      border-right: none !important
+      border-bottom: $border !important
+      height: 150px
+
+  .offer
+    &-block
+      min-height: 550px
+    &-timer
+      display: none
+    &-price
+      p
+        &:first-child
+          font-size: 38px
+        &:last-child
+          font-size: 20px
+
+@media only screen and (max-height : 480px)
+
+  .main-header
+    &-info
+      width: 500px
+    &__title
+      font-size: 70px
+      margin-bottom: 0
+      line-height: 70px
+    &__subtitle
+      font-size: 15px
+      margin-bottom: 20px
+    &__button
+      font-size: 13px
+      line-height: 40px
+      padding: 0 25px
+      border-radius: 25px
+
+  .main-menu
+    &-links
+      padding-top: 50px
+      li
+        line-height: 35px
+    &__link
+      font-size: 25px
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+
